@@ -28,7 +28,7 @@ namespace SaveEditorTest
         public void FileBackup_LoadDirectory_OnRandomPath_ShouldReturnFalse()
         {
             var fileBackup = new FileBackup(BasePath + "NIMP");
-            Assert.AreEqual(false,fileBackup.LoadDirectory());
+            Assert.AreEqual(false, fileBackup.LoadDirectory());
             Assert.AreEqual(FileBackupStatus.Error, fileBackup.Status);
         }
 
@@ -59,7 +59,7 @@ namespace SaveEditorTest
             if (File.Exists(filePath))
                 File.Delete(filePath);
 
-            Assert.AreEqual(true,fileBackup.BackUpDirectory(output, saveName).Result);
+            Assert.AreEqual(true, fileBackup.BackUpDirectory(output, saveName).Result);
             Assert.AreEqual(true, File.Exists($"{output}/{saveName}.zip"));
         }
 
@@ -85,7 +85,7 @@ namespace SaveEditorTest
 
             new DirectoryInfo(BasePath).Delete(true);
             var reloadFb = new FileBackup(BasePath);
-            Assert.AreEqual(false,reloadFb.LoadDirectory());
+            Assert.AreEqual(false, reloadFb.LoadDirectory());
             Assert.AreEqual(true, fileBackup.RestoreDirectory(source: filePath).Result);
 
             Assert.AreEqual(true, reloadFb.LoadDirectory());
@@ -93,6 +93,5 @@ namespace SaveEditorTest
             Assert.AreEqual(1, reloadFb.Characters.Count);
             Assert.AreEqual("Bamboulorc", reloadFb.Characters.First());
         }
-
     }
 }
