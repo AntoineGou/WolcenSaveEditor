@@ -5,6 +5,7 @@ namespace WolcenFileManagers
 {
     public interface IFileBackup
     {
+        DirectoryInfo SaveDirectory { get; set; }
         FileBackupStatus Status { get; }
         List<string> Characters { get; set; }
         bool LoadDirectory();

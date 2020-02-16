@@ -12,11 +12,10 @@ namespace WolcenFileManagers
         private const string PlayerDataFileName = "playerdata.json";
         private const string CharactersDirectoryName = "characters";
 
-        private readonly DirectoryInfo _directory;
+        public DirectoryInfo SaveDirectory { get; set; }
 
-        public FileBackup(string basePath)
+        public FileBackup()
         {
-            _directory = new DirectoryInfo(basePath);
         }
 
         public FileBackupStatus Status { get; private set; } = FileBackupStatus.Created;
@@ -24,15 +23,15 @@ namespace WolcenFileManagers
 
         public bool LoadDirectory()
         {
-            _directory.Refresh();
-            if (_directory.Exists)
+            SaveDirectory.Refresh();
+            if (SaveDirectory.Exists)
             {
-                var files = _directory.GetFiles("*.json");
+                var files = SaveDirectory.GetFiles("*.json");
                 if (files.Any(x => x.Name == PlayerChestFileName) && files.Any(x => x.Name == PlayerDataFileName))
                 {
-                    if (_directory.GetDirectories().Any(x => x.Name == CharactersDirectoryName))
+                    if (SaveDirectory.GetDirectories().Any(x => x.Name == CharactersDirectoryName))
                     {
-                        var charFiles = _directory.EnumerateDirectories().Single(x => x.Name == CharactersDirectoryName)
+                        var charFiles = SaveDirectory.EnumerateDirectories().Single(x => x.Name == CharactersDirectoryName)
                             .GetFiles("*.json");
                         foreach (var charFile in charFiles)
                         {
@@ -62,7 +61,7 @@ namespace WolcenFileManagers
                 dir.Create();
             try
             {
-                ZipFile.CreateFromDirectory(_directory.FullName, $"{outputDirectory}/{fileName}.zip");
+                ZipFile.CreateFromDirectory(SaveDirectory.FullName, $"{outputDirectory}/{fileName}.zip");
             }
             catch (Exception e)
             {
@@ -76,7 +75,7 @@ namespace WolcenFileManagers
         {
             try
             {
-                ZipFile.ExtractToDirectory(source, _directory.FullName);
+                ZipFile.ExtractToDirectory(source, SaveDirectory.FullName);
                 return (true, string.Empty);
             }
             catch (Exception e)
