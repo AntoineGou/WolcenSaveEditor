@@ -6,11 +6,11 @@ namespace WolcenFileManagers
 {
     public class FileBackup
     {
-        private static readonly string PlayerChestFileName = "playerchest.json";
-        private static readonly string PlayerDataFileName = "playerdata.json";
-        private readonly DirectoryInfo _directory;
-        private static readonly string CharactersDirectoryName = "characters";
+        private const string PlayerChestFileName = "playerchest.json";
+        private const string PlayerDataFileName = "playerdata.json";
+        private const string CharactersDirectoryName = "characters";
 
+        private readonly DirectoryInfo _directory;
 
         public FileBackup(string basePath)
         {
