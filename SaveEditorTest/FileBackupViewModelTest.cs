@@ -18,8 +18,8 @@ namespace SaveEditorTest
             var fileBackup = new FileBackup();
             var viewModel = new FileBackupViewModel(fileBackup);
 
-            Assert.AreEqual(FileBackupStatus.Loaded, fileBackup.Status);
-            Assert.AreEqual(true, viewModel.IsDirectoryValid);
+            Assert.AreNotEqual(FileBackupStatus.Created, fileBackup.Status);
+            Assert.AreEqual(string.Empty, viewModel.SaveDirectory);
         }
 
         /// <summary>
