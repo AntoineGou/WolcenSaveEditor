@@ -24,6 +24,7 @@ namespace WolcenFileManagers
 
         public bool LoadDirectory()
         {
+            _directory.Refresh();
             if (_directory.Exists)
             {
                 var files = _directory.GetFiles("*.json");
@@ -68,7 +69,20 @@ namespace WolcenFileManagers
                 return (false, e.Message);
                 
             }
-            return (true, "");
+            return (true, string.Empty);
+        }
+
+        public (bool Result, string Message) RestoreDirectory(string source)
+        {
+            try
+            {
+                ZipFile.ExtractToDirectory(source, _directory.FullName);
+                return (true, string.Empty);
+            }
+            catch (Exception e)
+            {
+                return (false, e.Message);
+            }
         }
     }
 
