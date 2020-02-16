@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WolcenFileManagers\WolcenFileManagers.csproj" />
+    <ProjectReference Include="..\WolcenSaveEditor\WolcenSaveEditor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
