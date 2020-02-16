@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WolcenSaveEditor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-<Label>TODO</Label>
-    </Grid>
+        Title="MainWindow" Height="420" Width="600">
+    <StackPanel Orientation="Vertical" Margin="5">
+        <Label>Select Wolcen Save Directory</Label>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBox Width="400" Margin="5"></TextBox>
+            <Button Margin="5">Browse</Button>
+            <Label Margin="5">Invalid</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Margin="5">Save</Button>
+            <Button Margin="5">Restore From Previous Save</Button>
+        </StackPanel>
+    </StackPanel>
 </Window>
