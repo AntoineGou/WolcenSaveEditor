@@ -31,5 +31,3 @@ You can modify different values for offline saved characters.
     - [ ] Character Currencies
     - [ ] Character SkillTree
     - [ ] Load Builds (Json files)
-
-###End
