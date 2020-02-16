@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
@@ -41,5 +42,22 @@ namespace SaveEditorTest
             Assert.AreEqual(1, fileBackup.Characters.Count);
             Assert.AreEqual("Bamboulorc", fileBackup.Characters.First());
         }
+
+        [Category("integration")]
+        [Test]
+        public void FileBackup_BackupDirectory_OnBaseFiles_ShouldCreateAZipFile()
+        {
+            var fileBackup = new FileBackup(BasePath);
+            Assert.AreEqual(true, fileBackup.LoadDirectory());
+            Assert.AreEqual(FileBackupStatus.Loaded, fileBackup.Status);
+            Assert.AreEqual(1, fileBackup.Characters.Count);
+
+            var saveName = $"bu{DateTime.Now:yy-MM-dd-mm-ss}";
+            var output = "./output";
+            Assert.AreEqual(true,fileBackup.BackUpDirectory(output, saveName).Result);
+            Assert.AreEqual(true, File.Exists($"{output}/{saveName}.zip"));
+        }
+
+
     }
 }

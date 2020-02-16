@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 
 namespace WolcenFileManagers
@@ -50,6 +52,23 @@ namespace WolcenFileManagers
             {
                 Characters.Add(charFile.Name.Replace(".json",""));
             }
+        }
+
+        public (bool Result, string Message) BackUpDirectory(string outputDirectory, string fileName)
+        {
+            var dir = new DirectoryInfo(outputDirectory);
+            if (!dir.Exists)
+                dir.Create();
+            try
+            {
+                ZipFile.CreateFromDirectory(_directory.FullName, $"{outputDirectory}/{fileName}.zip");
+            }
+            catch (Exception e)
+            {
+                return (false, e.Message);
+                
+            }
+            return (true, "");
         }
     }
 
