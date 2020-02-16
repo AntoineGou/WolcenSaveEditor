@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using GalaSoft.MvvmLight.Command;
+using Microsoft.Win32;
 using WolcenFileManagers;
 
 namespace WolcenSaveEditor.VMS
@@ -28,6 +30,8 @@ namespace WolcenSaveEditor.VMS
             set
             {
                 _saveDirectory = value;
+                _fileBackup.SaveDirectory = new DirectoryInfo(value);
+                IsDirectoryValid = _fileBackup.LoadDirectory();
                 RaisePropertyChanged();
             }
         }
@@ -42,6 +46,23 @@ namespace WolcenSaveEditor.VMS
             }
         }
 
+        public RelayCommand SaveCommand => new RelayCommand(() => PerformSave());
+
+        public void PerformSave()
+        {
+            if (!IsDirectoryValid) return;
+
+            var saveFileDialog = new SaveFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Filter = "zip files (*.zip)|*.zip"
+            };
+
+            if (saveFileDialog.ShowDialog().GetValueOrDefault())
+            {
+                _fileBackup.BackUpDirectory(saveFileDialog.FileName);
+            }
+        }
         private DirectoryInfo GetDefaultSaveDirectory()
         {
             var basePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);

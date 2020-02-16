@@ -54,14 +54,13 @@ namespace WolcenFileManagers
             }
         }
 
-        public (bool Result, string Message) BackUpDirectory(string outputDirectory, string fileName)
+        public (bool Result, string Message) BackUpDirectory(string fileName)
         {
-            var dir = new DirectoryInfo(outputDirectory);
-            if (!dir.Exists)
-                dir.Create();
+            if (!fileName.EndsWith(".zip"))
+                fileName = $"{fileName}.zip";
             try
             {
-                ZipFile.CreateFromDirectory(SaveDirectory.FullName, $"{outputDirectory}/{fileName}.zip");
+                ZipFile.CreateFromDirectory(SaveDirectory.FullName, fileName);
             }
             catch (Exception e)
             {

@@ -59,7 +59,7 @@ namespace SaveEditorTest
             if (File.Exists(filePath))
                 File.Delete(filePath);
 
-            Assert.AreEqual(true, fileBackup.BackUpDirectory(output, saveName).Result);
+            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{output}/{saveName}").Result);
             Assert.AreEqual(true, File.Exists($"{output}/{saveName}.zip"));
         }
 
@@ -80,7 +80,7 @@ namespace SaveEditorTest
                 File.Delete(filePath);
 
             
-            Assert.AreEqual(true, fileBackup.BackUpDirectory(output, saveName).Result);
+            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{output}/{saveName}").Result);
             Assert.AreEqual(true, File.Exists(filePath));
 
             new DirectoryInfo(BasePath).Delete(true);

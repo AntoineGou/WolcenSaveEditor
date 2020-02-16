@@ -16,7 +16,7 @@
             <Label>Valid</Label>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="5">
-            <Button Margin="5">Save</Button>
+            <Button Margin="5" Command="{Binding Path=SaveCommand}">Save</Button>
             <Button Margin="5">Restore From Previous Save</Button>
         </StackPanel>
     </StackPanel>
