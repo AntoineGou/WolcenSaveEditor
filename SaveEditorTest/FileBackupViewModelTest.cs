@@ -28,7 +28,7 @@ namespace SaveEditorTest
         /// </summary>
         [Category("integration")]
         [Test]
-        public void FileBackupViewModel_Save_OnInvalidFilder_DoesNothing()
+        public void FileBackupViewModel_Save_OnInvalidFolder_DoesNothing()
         {
             var fileBackup = new FileBackup();
             var viewModel = new FileBackupViewModel(fileBackup);

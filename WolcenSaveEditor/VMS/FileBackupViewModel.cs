@@ -1,8 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
 using WolcenFileManagers;
