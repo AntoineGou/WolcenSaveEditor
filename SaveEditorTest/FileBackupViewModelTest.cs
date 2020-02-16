@@ -4,7 +4,6 @@ using WolcenSaveEditor.VMS;
 
 namespace SaveEditorTest
 {
-    [TestFixture]
     public class FileBackupViewModelTest
     {
         [SetUp]

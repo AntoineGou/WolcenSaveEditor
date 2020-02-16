@@ -52,15 +52,16 @@ namespace SaveEditorTest
             Assert.AreEqual(FileBackupStatus.Loaded, fileBackup.Status);
             Assert.AreEqual(1, fileBackup.Characters.Count);
 
-            var output = "./output";
             var saveName = $"bu{DateTime.Now:yy-MM-dd-mm-ss}";
 
-            var filePath = $"{output}/{saveName}.zip";
+            var filePath = $"{saveName}.zip";
             if (File.Exists(filePath))
                 File.Delete(filePath);
 
-            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{output}/{saveName}").Result);
-            Assert.AreEqual(true, File.Exists($"{output}/{saveName}.zip"));
+            Console.WriteLine(filePath);
+
+            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{saveName}").Result);
+            Assert.AreEqual(true, File.Exists($"{saveName}.zip"));
         }
 
         [Category("integration")]
@@ -72,15 +73,14 @@ namespace SaveEditorTest
             Assert.AreEqual(FileBackupStatus.Loaded, fileBackup.Status);
             Assert.AreEqual(1, fileBackup.Characters.Count);
 
-            var output = "./output";
             var saveName = $"bu{DateTime.Now:yy-MM-dd-mm-ss}";
 
-            var filePath = $"{output}/{saveName}.zip";
+            var filePath = $"{saveName}.zip";
             if (File.Exists(filePath))
                 File.Delete(filePath);
 
             
-            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{output}/{saveName}").Result);
+            Assert.AreEqual(true, fileBackup.BackUpDirectory($"{saveName}").Result);
             Assert.AreEqual(true, File.Exists(filePath));
 
             new DirectoryInfo(BasePath).Delete(true);
