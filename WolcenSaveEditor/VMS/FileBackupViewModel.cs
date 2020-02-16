@@ -51,8 +51,6 @@ namespace WolcenSaveEditor.VMS
 
         private void PerformRestore()
         {
-            if (!IsDirectoryValid) return;
-
             var openFileDialog = new OpenFileDialog()
             {
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
