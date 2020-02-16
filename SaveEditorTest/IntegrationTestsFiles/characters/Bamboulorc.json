@@ -1,0 +1,599 @@
+{
+	"Name":	"Bamboulorc",
+	"PlayerId":	"offlineplayer",
+	"CharacterId":	"Bamboulorc",
+	"DifficultyMode":	1,
+	"League":	1,
+	"UpdatedAt":	"20-02-16T02:06:21Z",
+	"CharacterCustomization":	{
+		"Sex":	0,
+		"Face":	1,
+		"SkinColor":	100,
+		"Haircut":	1,
+		"HairColor":	5,
+		"Beard":	1,
+		"BeardColor":	5,
+		"LeftEye":	1,
+		"RightEye":	1,
+		"Archetype":	2
+	},
+	"Stats":	{
+		"Strength":	1,
+		"Agility":	1,
+		"Constitution":	1,
+		"Power":	1,
+		"Level":	1,
+		"PassiveSkillPoints":	0,
+		"CurrentXP":	"0",
+		"RemainingStatsPoints":	0,
+		"Gold":	"0",
+		"PrimordialAffinity":	"0",
+		"IsAutoDashAvailable":	1,
+		"DashStatusActivation":	1
+	},
+	"UnlockedSkills":	[{
+			"SkillName":	"player_fireball",
+			"Level":	1,
+			"CurrentXp":	"0",
+			"Variants":	"0000000000000000"
+		}],
+	"SkillBar":	[{
+			"Slot":	12,
+			"SkillName":	"player_fireball"
+		}],
+	"BeltConfig":	[{
+			"Id":	0,
+			"Locked":	0
+		}, {
+			"Id":	1,
+			"Locked":	1
+		}],
+	"Progression":	{
+		"LastPlayed":	{
+			"QuestId":	"INTRO_Quest1",
+			"StepId":	1
+		},
+		"QuestProgression":	[{
+				"Name":	"INTRO_Quest1",
+				"Step":	1
+			}]
+	},
+	"Telemetry":	{
+		"Version":	"2",
+		"Playtime":	{
+			"Total":	"0.207142",
+			"PerLevel":	"0.207142"
+		},
+		"PlaytimeOutTown":	{
+			"Total":	"0.206720",
+			"PerLevel":	"0.206720"
+		},
+		"KillCountPerBossrank":	[{
+				"Type":	"Normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Champion",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Lord",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Elder",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"DungeonBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"ActBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Nemesis",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"EventBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"KillCountPerMobRankType":	[{
+				"Type":	"Trash",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Lieutenant",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Elite",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Boss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"MinLevelKilled":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"MaxLevelKilled":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"DeathCount":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"DeathCountPerBossrank":	[{
+				"Type":	"Normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Champion",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Lord",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Elder",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"DungeonBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"ActBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"Nemesis",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"EventBoss",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"XpFromQuest":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"XpFromKill":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldDropped":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldGainedQuests":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldGainedMerchant":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldPicked":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldSpent":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldSpentMerchant":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"GoldSpentJewelerUnsocketItem":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"PrimordialAffinitySpent":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"PrimordialAffinitySpentSkillLevelUp":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"PrimordialAffinityGained":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"ItemsDropped":	[{
+				"Type":	"normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"magic",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"rare",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"legendary",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"set",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"unique",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"quest",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"ItemsPicked":	[{
+				"Type":	"normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"magic",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"rare",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"legendary",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"set",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"unique",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"quest",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"ItemsBought":	[{
+				"Type":	"normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"magic",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"rare",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"legendary",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"set",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"unique",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"quest",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"ItemsSold":	[{
+				"Type":	"normal",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"magic",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"rare",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"legendary",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"set",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"unique",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}, {
+				"Type":	"quest",
+				"Total":	"0",
+				"PerLevel":	"0"
+			}],
+		"TimeSpentPerZone":	[{
+				"Type":	"Stormfall",
+				"Total":	"0.000423",
+				"PerLevel":	"0.000423"
+			}, {
+				"Type":	"GameplayArea_Intro0",
+				"Total":	"0.206720",
+				"PerLevel":	"0.206720"
+			}],
+		"SoloReviveTokenUsedPerZone":	[],
+		"SoloDeathPerZone":	[],
+		"MultiRevivePerZone":	[],
+		"SkillUsage":	[{
+				"Type":	"default_melee",
+				"Total":	"1",
+				"PerLevel":	"1"
+			}],
+		"QuestAttempt_NPC1":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestAttempt_NPC2":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestSuccess_NPC1":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestSuccess_NPC2":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestFailed_NPC1":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestFailed_NPC2":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"QuestMaxFloorReached_NPC2":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"UnlockChestCount":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"ResetPSTCount":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		},
+		"ResetCharacterAttributesCount":	{
+			"Total":	"0",
+			"PerLevel":	"0"
+		}
+	},
+	"Versions":	{
+		"SaveVersion":	"1.0.0.0",
+		"StatsVersion":	"1.0.0.0",
+		"ItemsVersion":	"1.0.0.0",
+		"InventoryVersion":	"1.0.0.0",
+		"ASTVersion":	"1.0.0.0",
+		"ASTVariantsVersion":	"1.0.0.0",
+		"PSTVersion":	"1.0.0.0",
+		"StorylineVersion":	"1.0.0.0"
+	},
+	"CharacterCosmeticInventory":	{
+		"CosmeticColors":	{
+			"ArmL":	{
+				"ColorSlots":	[]
+			},
+			"ArmR":	{
+				"ColorSlots":	[]
+			},
+			"Boots":	{
+				"ColorSlots":	[]
+			},
+			"Chest":	{
+				"ColorSlots":	[]
+			},
+			"Helmet":	{
+				"ColorSlots":	[]
+			},
+			"Pant":	{
+				"ColorSlots":	[]
+			},
+			"ShoulderL":	{
+				"ColorSlots":	[]
+			},
+			"ShoulderR":	{
+				"ColorSlots":	[]
+			}
+		},
+		"CosmeticSkinT":	{
+			"Equip":	{
+				"ArmL":	{
+				},
+				"ArmR":	{
+				},
+				"Boots":	{
+				},
+				"Chest":	{
+				},
+				"Helmet":	{
+				},
+				"Pant":	{
+				},
+				"ShoulderL":	{
+				},
+				"ShoulderR":	{
+				}
+			}
+		},
+		"CosmeticWeaponT":	{
+			"WeaponSkinTransfers":	{
+				"WeaponLeft":	{
+					"Ids":	{
+					}
+				},
+				"WeaponRight":	{
+					"Ids":	{
+					}
+				}
+			}
+		}
+	},
+	"InventoryEquipped":	[{
+			"BodyPart":	1,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	2,
+			"ItemType":	"Chest Armor",
+			"Value":	"15",
+			"Level":	1,
+			"Armor":	{
+				"Name":	"OutfitVeteran_Chest",
+				"Health":	10
+			}
+		}, {
+			"BodyPart":	9,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	2,
+			"ItemType":	"Arm Armor",
+			"Value":	"15",
+			"Level":	1,
+			"Armor":	{
+				"Name":	"OutfitVeteran_Armband",
+				"Health":	2
+			}
+		}, {
+			"BodyPart":	10,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	2,
+			"ItemType":	"Arm Armor",
+			"Value":	"14",
+			"Level":	1,
+			"Armor":	{
+				"Name":	"OutfitVeteran_Armband",
+				"Health":	2
+			}
+		}, {
+			"BodyPart":	11,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	2,
+			"ItemType":	"Leg Armor",
+			"Value":	"14",
+			"Level":	1,
+			"Armor":	{
+				"Name":	"OutfitVeteran_Pants",
+				"Health":	4
+			}
+		}, {
+			"BodyPart":	15,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	3,
+			"ItemType":	"Staff",
+			"Value":	"30",
+			"Level":	1,
+			"Weapon":	{
+				"Name":	"2H_Staff_Starter",
+				"DamageMin":	2,
+				"DamageMax":	8,
+				"ResourceGeneration":	50
+			},
+			"MagicEffects":	{
+				"Default":	[{
+						"EffectId":	"transfer_time_percent",
+						"EffectName":	"percent_rage_to_umbra",
+						"MaxStack":	1,
+						"bDefault":	1,
+						"Parameters":	[{
+								"semantic":	"DurationPercentInt",
+								"value":	29
+							}]
+					}, {
+						"EffectId":	"default_attacks_chain",
+						"EffectName":	"implicit_chain_staff",
+						"MaxStack":	1,
+						"bDefault":	1,
+						"Parameters":	[{
+								"semantic":	"RadiusFloat",
+								"value":	10
+							}, {
+								"semantic":	"StackCountInt",
+								"value":	2
+							}]
+					}]
+			}
+		}, {
+			"BodyPart":	17,
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	2,
+			"ItemType":	"Foot Armor",
+			"Value":	"14",
+			"Level":	1,
+			"Armor":	{
+				"Name":	"OutfitVeteran_Boots",
+				"Health":	2
+			}
+		}],
+	"InventoryGrid":	[],
+	"InventoryBelt":	[{
+			"Rarity":	1,
+			"Quality":	1,
+			"Type":	4,
+			"ItemType":	"Potions",
+			"ItemVersion":	"0.5.0.2",
+			"Value":	"30",
+			"Level":	1,
+			"Potion":	{
+				"Name":	"Potion_S_Health",
+				"Charge":	20,
+				"ImmediateHP":	250
+			},
+			"BeltSlot":	0
+		}],
+	"PSTConfig":	[{
+			"Id":	0,
+			"Mode":	0
+		}, {
+			"Id":	1,
+			"Mode":	0
+		}, {
+			"Id":	2,
+			"Mode":	0
+		}],
+	"ApocalypticData":	{
+		"UnlockedTypes":	[]
+	},
+	"Tutorials":	[{
+			"Trigger":	"Quest_Movement"
+		}],
+	"LastGameParameters":	{
+		"GameMode":	1,
+		"DifficultyMode":	1,
+		"Difficulty":	2,
+		"League":	1,
+		"QuestId":	"INTRO_Quest1",
+		"StepId":	1,
+		"Privacy":	2,
+		"Level":	3
+	}
+}

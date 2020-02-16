@@ -1,0 +1,39 @@
+{
+	"EulaAgreement":	false,
+	"NewsReadIds":	["ContentPatch1", "ContentPatch2"],
+	"AccountCosmeticInventory":	{
+		"CosmeticColorsUnlocked":	{
+			"version":	0,
+			"bitmask":	"0000000000000002000008000000000000000000000000000000000000000000"
+		},
+		"CosmeticWeaponsUnlocked":	{
+			"version":	0,
+			"bitmask":	"00004000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+		},
+		"CosmeticArmorsUnlocked":	{
+			"version":	0,
+			"bitmask":	"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f00000000000000000000000000000"
+		}
+	},
+	"SoftcoreNormal":	{
+		"CompletedStory":	false,
+		"ExpeditionsMaxLevelReached":	0,
+		"CityBuilding":	{
+			"Version":	0,
+			"FinishedTurns":	0,
+			"FinishedProjects":	[],
+			"OngoingProjects":	[],
+			"OngoingEventProjects":	[],
+			"PendingRewards":	[],
+			"RewardInstances":	[],
+			"RolledProjects":	[],
+			"PendingEvents":	[],
+			"TurnsUntilNextNarrativeEventRoll":	0,
+			"TimedProductionFactors":	[],
+			"NETypeCooldowns":	[],
+			"NECooldowns":	[],
+			"CECooldowns":	[],
+			"TurnsUntilNextCourierEventRoll":	0
+		}
+	}
+}

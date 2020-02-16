@@ -1,0 +1,21 @@
+{
+	"Version":	"1.0.0.0",
+	"InventoryVersion":	"1.0.0.0",
+	"ItemsVersion":	"1.0.0.0",
+	"Panels":	[{
+			"Id":	0,
+			"Locked":	false
+		}, {
+			"Id":	1,
+			"Locked":	true
+		}, {
+			"Id":	2,
+			"Locked":	true
+		}, {
+			"Id":	3,
+			"Locked":	true
+		}, {
+			"Id":	4,
+			"Locked":	true
+		}]
+}
