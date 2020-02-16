@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
 using System.IO;
+using System.Windows;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.Win32;
 using WolcenFileManagers;
@@ -44,7 +45,30 @@ namespace WolcenSaveEditor.VMS
             }
         }
 
-        public RelayCommand SaveCommand => new RelayCommand(() => PerformSave());
+        public RelayCommand SaveCommand => new RelayCommand(PerformSave);
+
+        public RelayCommand RestoreCommand => new RelayCommand(PerformRestore);
+
+        private void PerformRestore()
+        {
+            if (!IsDirectoryValid) return;
+
+            var openFileDialog = new OpenFileDialog()
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Filter = "zip files (*.zip)|*.zip"
+            };
+
+            if (openFileDialog.ShowDialog().GetValueOrDefault())
+            {
+                _fileBackup.SaveDirectory.Delete(true);
+                var (result, message) = _fileBackup.RestoreDirectory(openFileDialog.FileName);
+                if (!result)
+                {
+                    MessageBox.Show(message);
+                }
+            }
+        }
 
         public void PerformSave()
         {
@@ -58,7 +82,11 @@ namespace WolcenSaveEditor.VMS
 
             if (saveFileDialog.ShowDialog().GetValueOrDefault())
             {
-                _fileBackup.BackUpDirectory(saveFileDialog.FileName);
+                var (result, message) = _fileBackup.BackUpDirectory(saveFileDialog.FileName);
+                if (!result)
+                {
+                    MessageBox.Show(message);
+                }
             }
         }
         private DirectoryInfo GetDefaultSaveDirectory()
