@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace WolcenFileManagers
 {
-    public class FileBackup
+    public class FileBackup : IFileBackup
     {
         private const string PlayerChestFileName = "playerchest.json";
         private const string PlayerDataFileName = "playerdata.json";
@@ -84,12 +84,5 @@ namespace WolcenFileManagers
                 return (false, e.Message);
             }
         }
-    }
-
-    public enum FileBackupStatus
-    {
-        Created,
-        Loaded,
-        Error
     }
 }
