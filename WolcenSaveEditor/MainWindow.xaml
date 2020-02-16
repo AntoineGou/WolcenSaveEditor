@@ -11,7 +11,7 @@
         <Label>Select Wolcen Save Directory</Label>
         <StackPanel Orientation="Horizontal" Margin="5">
             <TextBox Width="400" Margin="5" Text="{Binding Path=SaveDirectory, Mode=TwoWay}"></TextBox>
-            <Button>Browse</Button>
+            <Button Command="{Binding SelectSaveFolderCommand}">Browse</Button>
             <CheckBox Margin="5" VerticalAlignment="Center" IsEnabled="False" IsChecked="{Binding Path=IsDirectoryValid, Mode=OneWay}"></CheckBox>
             <Label>Valid</Label>
         </StackPanel>

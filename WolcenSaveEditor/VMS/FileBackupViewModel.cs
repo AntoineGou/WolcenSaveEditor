@@ -1,10 +1,12 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
 using System.IO;
-using System.Windows;
+using System.Windows.Forms;
 using GalaSoft.MvvmLight.Command;
-using Microsoft.Win32;
 using WolcenFileManagers;
+using MessageBox = System.Windows.MessageBox;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace WolcenSaveEditor.VMS
 {
@@ -48,6 +50,22 @@ namespace WolcenSaveEditor.VMS
         public RelayCommand SaveCommand => new RelayCommand(PerformSave);
 
         public RelayCommand RestoreCommand => new RelayCommand(PerformRestore);
+
+        public RelayCommand SelectSaveFolderCommand => new RelayCommand(SelectSaveFolder);
+
+        private void SelectSaveFolder()
+        {
+            //https://github.com/dotnet/wpf/issues/438
+            var openFolderDialog = new System.Windows.Forms.FolderBrowserDialog()
+            {
+               SelectedPath = SaveDirectory
+            };
+
+            if (openFolderDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveDirectory = openFolderDialog.SelectedPath;
+            }
+        }
 
         private void PerformRestore()
         {
